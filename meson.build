@@ -1,4 +1,4 @@
-project('elinux', 'cpp',
+project('elinux', ['c','cpp'],
   version : '0.1',
   default_options : ['warning_level=3', 'cpp_std=c++17'])
 
@@ -10,7 +10,7 @@ subdir('inc')
 subdir('src')
 
 egl_dep = dependency('egl')
-wayland_dep = [dependency('wayland-client'), dependency('wayland-egl')]
+wayland_dep = [dependency('wayland-client'), dependency('wayland-egl'),  dependency('wayland-cursor') ]
 
 elinux_lib_dep = [src_dep, egl_dep, wayland_dep]
 inc = [include_directories('inc')]

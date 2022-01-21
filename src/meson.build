@@ -2,6 +2,7 @@ subdir('utils')
 subdir('surface')
 subdir('window')
 subdir('rendering')
+subdir('test')
 
 source_file = [
    'elinux_view.cc',
@@ -9,6 +10,6 @@ source_file = [
 
 src_dep = declare_dependency(
                                   include_directories : include_directories('.'),
-                                  dependencies : [utils_dep, surface_dep, window_dep, rendering_dep],
+                                  dependencies : [test_dep, utils_dep, surface_dep, window_dep, rendering_dep],
                                   sources : source_file
                                )
