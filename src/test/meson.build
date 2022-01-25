@@ -1,5 +1,5 @@
 source_file = [
-    'test.cpp',
+    'test2.cpp',
     'xdg-shell-protocol.c',
     'presentation-time-protocol.c',
 ]
